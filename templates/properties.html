@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Peep in all properties</title>
+	<!-- Styling -->
+	<link rel="stylesheet" type="text/css" href="/static/css/style.css">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+	<!-- Vue.js -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+	<script src="/static/js/components/Comment.js" defer></script>
+  	<script src="/static/js/app.js" defer></script>
+</head>
+<body>
+	<div id="app">
+		<div class="container">
+	    	<h1>peepIn</h1>
+		    <div class="user">
+		      <div class="user-information">
+		        <h3>Property: {{ property_name }}</h3>
+		      </div>
+		      <div class="user-bio" v-if="bio">
+		        <em>Address: </em> {{ property_address }}
+		      </div>
+		    </div>
+
+		    <div class="comments">
+		      <comment v-for="comment in comments" 
+		             v-bind:message="comment"
+		             v-bind:author="username"
+		             v-bind:date="date"></comment>
+		    </div>
+
+		    <div class="settings">
+		      <h2>Post a comment</h2>
+		      <label for="username">Username</label>
+		      <br>
+		      <input type="text" value="username" placeholder="???" v-model="username" />
+		      <br>
+		      <label for="comment">Comment</label>
+		      <div class="new-comment">
+		        <input type="text" value="comment" placeholder="New Comment" v-model="newComment" />
+		        <button v-on:click="comments.push(newComment)">Add comment</button>
+		      </div>
+    		</div>
+  		</div>
+  	</div>
+</body>
+</html>
