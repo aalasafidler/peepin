@@ -12,27 +12,27 @@
 
 5. cd into the folder
 
-6. Run “git remote -v” and you should see an ‘origin’ remote in there:
+6. Run ```git remote -v``` and you should see an ‘origin’ remote in there:
 
-origin https://github.com/Your-Name/peepin.git (fetch)
+```origin https://github.com/Your-Name/peepin.git (fetch)```
 
-origin https://github.com/Your-Name/peepin.git (push)
+```origin https://github.com/Your-Name/peepin.git (push)```
 
 
 
 #### CREATE REMOTE TO CENTRAL REPO:
 
-git remote add upstream https://github.com/aalasafidler/peepin.git
+7. Run ```git remote add upstream https://github.com/aalasafidler/peepin.git```
 
-Run git remote -v again to check you have a remote to the central/team repo. You should see:
+8. Run ```git remote -v```again to check you have a remote to the central/team repo. You should see:
 
-origin https://github.com/Your-Name/peepin.git (fetch)
+```origin https://github.com/Your-Name/peepin.git (fetch)```
 
-origin https://github.ibm.com/Your-Name/peepin.git (push)
+```origin https://github.ibm.com/Your-Name/peepin.git (push)```
 
-upstream https://github.com/aalasafidler/peepin.git (fetch)
+```upstream https://github.com/aalasafidler/peepin.git (fetch)```
 
-upstream https://github.com/aalasafidler/peepin.git (push)
+```upstream https://github.com/aalasafidler/peepin.git (push)```
 
 
 
